@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<cmath>
 using namespace std;
 int F(int A0,int A1,int i){
 	if(i>=2){
@@ -33,16 +34,16 @@ int T(int A0,int A1,int Z,int N){
 	return -1;
 }
 int main(){
-	int A0,A1,N,Z,t;
-	vector<int> list;
-	cin>>A0>>A1>>Z;
-	cin>>N;
-	for(int i=0;i<N;++i){
-		cin>>t;
-		list.push_back(t);
+	int t=1,sum=0;
+	for(int i=2;i<200;++i){
+		cout<<F(11,17,i)<<" ";
+		sum++;
+		if(sum==pow(2,t)){
+			cout<<"\n";
+			++t;
+			sum=0;
+		}
 	}
-	for(int i=0;i<N;++i){
-		cout<<T(A0,A1,Z,list.at(i))<<endl;
-	}
+	
 	return 0;
 }
