@@ -24,6 +24,8 @@ int main()
 	string in,af;
 	cin >> in >> af;
 	fun(in,af);
+	getchar();
+	getchar();
 	return 0;
- 
+
 }
