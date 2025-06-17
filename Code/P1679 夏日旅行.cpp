@@ -23,7 +23,7 @@ int BFS() {
 	queue<node> q;
 	q.push(S);
 	while(!q.empty()) {
-		node top = q.front();
+		node top = q.fr  ont();
 		q.pop();
 		if(top.x == T.x && top.y == T.y) {
 			return top.step;
